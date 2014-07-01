@@ -1,18 +1,14 @@
 #coding=utf-8
-
-import commands
-import gevent
-from gevent import monkey
 import sys
-import xpermutations
-
-monkey.patch_all()
 
 __author__ = 'trigged'
 
-first = ["b", "p", "m", "f", "d", "t", "n", "l", "g", "k", "h", "j", "q", "x", "zh", "ch", "sh", "r", "z", "c", "s", "y", "w"]
+import xpermutations
 
-yunm = ["a", "o", "e", "i", "u", "ang", "eng", "ing", "ong"]
+t1 = [1, 2, 3]
+t2 = ["a", "b", "c"]
+
+charset = ["ba", "bo", "bi"]
 
 charset = ["ba", "bo", "be", "bi", "bu", "bang", "beng", "bing", "bong", "pa", "po", "pe", "pi", "pu", "pang", "peng",
            "ping", "pong", "ma", "mo", "me", "mi", "mu", "mang", "meng", "ming", "mong", "fa", "fo", "fe", "fi", "fu",
@@ -29,11 +25,9 @@ charset = ["ba", "bo", "be", "bi", "bu", "bang", "beng", "bing", "bong", "pa", "
            "ya", "yo", "ye", "yi", "yu", "yang", "yeng", "ying", "yong", "wa", "wo", "we", "wi", "wu", "wang", "weng", "wing", "wong", ]
 
 
-def generaChars():
-    for i in first:
-        for j in yunm:
-            print '"' + i + j + '",',
-
+# print list(xpermutations.xpermutations(charset))
+#
+# print list()
 
 def buildTask(max_url, length):
     count = 0
@@ -47,32 +41,8 @@ def buildTask(max_url, length):
             count = 0
 
 
-# blender colors
-class Colors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
 
 
-def ranTask(domain):
-    url = domain
-    out = commands.getoutput('whois %s' % url)
-    if 'No match' in out:
-        print url, " :", Colors.OKGREEN + "Available" + Colors.ENDC
-    else:
-        print url, " :", Colors.FAIL + "Taken" + Colors.ENDC
 
-
-def main():
-    for urls in buildTask(int(sys.argv[1]), int(sys.argv[2])):
-        task = [gevent.spawn(ranTask, url) for url in urls]
-        gevent.joinall(task, timeout=10)
-
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print "Usage python domain_checker.py max_url length "
-    main()
+            # print sys.argv[1]
+            # print sys.argv[2]
