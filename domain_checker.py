@@ -3,10 +3,10 @@
 import commands
 import gevent
 from gevent import monkey
+monkey.patch_all()
 import sys
 import xpermutations
 
-monkey.patch_all()
 
 __author__ = 'trigged'
 
@@ -57,9 +57,10 @@ class Colors:
     ENDC = '\033[0m'
 
 
-def ranTask(domain):
+def runTask(domain):
     url = domain
     out = commands.getoutput('whois %s' % url)
+    print out[:27],
     if 'No match' in out:
         print url, " :", Colors.OKGREEN + "Available" + Colors.ENDC
     else:
@@ -67,12 +68,11 @@ def ranTask(domain):
 
 
 def main():
-    for urls in buildTask(int(sys.argv[1]), int(sys.argv[2])):
-        task = [gevent.spawn(ranTask, url) for url in urls]
+    for urls in buildTask(int(1000), int(2)):
+        print urls
+        task = [gevent.spawn(runTask, url) for url in urls]
         gevent.joinall(task, timeout=10)
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print "Usage python domain_checker.py max_url length "
     main()
