@@ -14,20 +14,29 @@ first = ["b", "p", "m", "f", "d", "t", "n", "l", "g", "k", "h", "j", "q", "x", "
 
 yunm = ["a", "o", "e", "i", "u", "ang", "eng", "ing", "ong"]
 
-charset = ["ba", "bo", "be", "bi", "bu", "bang", "beng", "bing", "bong", "pa", "po", "pe", "pi", "pu", "pang", "peng",
-           "ping", "pong", "ma", "mo", "me", "mi", "mu", "mang", "meng", "ming", "mong", "fa", "fo", "fe", "fi", "fu",
-           "fang", "feng", "fing", "fong", "da", "do", "de", "di", "du", "dang", "deng", "ding", "dong", "ta", "to", "te",
-           "ti", "tu", "tang", "teng", "ting", "tong", "na", "no", "ne", "ni", "nu", "nang", "neng", "ning", "nong", "la",
-           "lo", "le", "li", "lu", "lang", "leng", "ling", "long", "ga", "go", "ge", "gi", "gu", "gang", "geng", "ging",
-           "gong", "ka", "ko", "ke", "ki", "ku", "kang", "keng", "king", "kong", "ha", "ho", "he", "hi", "hu", "hang",
-           "heng", "hing", "hong", "ja", "jo", "je", "ji", "ju", "jang", "jeng", "jing", "jong", "qa", "qo", "qe", "qi",
-           "qu", "qang", "qeng", "qing", "qong", "xa", "xo", "xe", "xi", "xu", "xang", "xeng", "xing", "xong", "zha", "zho",
-           "zhe", "zhi", "zhu", "zhang", "zheng", "zhing", "zhong", "cha", "cho", "che", "chi", "chu", "chang", "cheng",
-           "ching", "chong", "sha", "sho", "she", "shi", "shu", "shang", "sheng", "shing", "shong", "ra", "ro", "re", "ri",
-           "ru", "rang", "reng", "ring", "rong", "za", "zo", "ze", "zi", "zu", "zang", "zeng", "zing", "zong", "ca", "co",
-           "ce", "ci", "cu", "cang", "ceng", "cing", "cong", "sa", "so", "se", "si", "su", "sang", "seng", "sing", "song",
-           "ya", "yo", "ye", "yi", "yu", "yang", "yeng", "ying", "yong", "wa", "wo", "we", "wi", "wu", "wang", "weng", "wing", "wong", ]
-
+charset = ['b', 'ba', 'bo', 'bai', 'bei', 'bao', 'ban', 'ben', 'bang',   'bi', 'bie', 'biao', 'bian',
+             'bing', 'p', 'pa', 'po', 'pai', 'pao', 'pan', 'pen', 'pang', 'peng', 'pi',
+           'piao', 'pian', 'pin', 'ping', 'm', 'ma', 'mo', 'me', 'mai', 'mao', 'mou', 'man', 'men', 'mang',
+           'meng', 'mi', 'mie', 'miao',  'mian', 'min', 'ming', 'f', 'fa', 'fo', 'fei', 'fou', 'fan',
+           'fen', 'fang', 'feng', 'da', 'de', 'dai', 'dei', 'dao', 'dou', 'dan', 'dang', 'deng', 'di',
+           'die', 'diao', 'diu', 'dian', 'ding', 'dong', 't', 'ta', 'te', 'tai', 'tao', 'tou', 'tan',
+           'tang', 'teng', 'ti', 'tie', 'tiao', 'tian', 'ting', 'tong', 'n', 'na', 'nai', 'nei', 'nao',
+           'no', 'nen', 'nang', 'neng', 'ni', 'nie', 'niao', 'niu', 'nian', 'nin', 'niang', 'ning',
+           'nong', 'l', 'la', 'le', 'lai', 'lei', 'lao', 'lou', 'lan', 'lang', 'leng', 'li', 'lia',
+           'lie', 'liao', 'liu', 'lian', 'lin', 'liang', 'ling', 'long', 'g', 'ga', 'ge', 'gai',
+           'gei', 'gao', 'gou', 'gan', 'gen', 'gang', 'geng', 'gong', 'k', 'ka', 'ke', 'kai', 'kou',
+           'kan', 'ken', 'kang', 'keng', 'kong', 'h', 'ha', 'he', 'hai', 'hei', 'hao', 'hou', 'hen',
+           'hang', 'heng', 'hong', 'j', 'ji', 'jia', 'jie', 'jiao', 'jiu', 'jian', 'jin', 'jiang', 'jing',
+           'jiong', 'q', 'qi', 'qia', 'qie', 'qiao', 'qiu', 'qian', 'qin', 'qiang', 'qing', 'qiong', 'x',
+           'xi', 'xia', 'xie', 'xiao', 'xiu', 'xian', 'xin', 'xiang', 'xing', 'xiong', 'zh', 'zha', 'zhe',
+           'zhi', 'zhai', 'zhao', 'zhou', 'zhan', 'zhen', 'zhang', 'zheng', 'zhong', 'ch', 'cha', 'che',
+           'chi', 'chai', 'chao', 'chou', 'chan', 'chen', 'chang', 'cheng', 'chong', 'sh', 'sha', 'she',
+           'shi', 'shai', 'shao', 'shou', 'shan', 'shen', 'shang', 'sheng', 'r', 're', 'ri', 'rao', 'rou',
+           'ran', 'ren', 'rang', 'reng', 'rong', 'z', 'za', 'ze', 'zi', 'zai', 'zao', 'zou', 'zang', 'zeng',
+           'zong', 'c', 'ca', 'ce', 'ci', 'cai', 'cao', 'cou', 'can', 'cen', 'cang', 'ceng', 'cong', 's',
+           'sa', 'se', 'si', 'sai', 'sao', 'sou', 'san', 'sen', 'sang', 'seng', 'song', 'y', 'ya', 'yao',
+           'you', 'yan', 'yang', 'yu', 'ye', 'yue', 'yuan', 'yi', 'yin', 'yun', 'ying', 'yong', 'w', 'wa',
+           'wo', 'wai', 'wei', 'wan', 'wen', 'wang', 'weng', 'server', 'api']
 
 def generaChars():
     for i in first:
